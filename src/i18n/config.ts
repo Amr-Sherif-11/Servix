@@ -1,0 +1,51 @@
+export const locales = ['en', 'ar', 'fr', 'es', 'de', 'tr', 'fa', 'ur', 'hi', 'bn', 'pt', 'ru', 'zh', 'ja', 'ko', 'id', 'ms', 'it', 'nl', 'pl', 'sv', 'da', 'no', 'fi', 'cs', 'ro', 'hu', 'el', 'th', 'vi', 'uk'] as const
+export type Locale = (typeof locales)[number]
+export const defaultLocale: Locale = 'en'
+
+export const localeNames: Record<Locale, string> = {
+  en: 'English',
+  ar: 'العربية',
+  fr: 'Français',
+  es: 'Español',
+  de: 'Deutsch',
+  tr: 'Türkçe',
+  fa: 'فارسی',
+  ur: 'اردو',
+  hi: 'हिन्दी',
+  bn: 'বাংলা',
+  pt: 'Português',
+  ru: 'Русский',
+  zh: '中文',
+  ja: '日本語',
+  ko: '한국어',
+  id: 'Bahasa Indonesia',
+  ms: 'Bahasa Melayu',
+  it: 'Italiano',
+  nl: 'Nederlands',
+  pl: 'Polski',
+  sv: 'Svenska',
+  da: 'Dansk',
+  no: 'Norsk',
+  fi: 'Suomi',
+  cs: 'Čeština',
+  ro: 'Română',
+  hu: 'Magyar',
+  el: 'Ελληνικά',
+  th: 'ภาษาไทย',
+  vi: 'Tiếng Việt',
+  uk: 'Українська',
+}
+
+export const localeDir: Record<Locale, 'ltr' | 'rtl'> = {
+  en: 'ltr', ar: 'rtl', fr: 'ltr',
+  es: 'ltr', de: 'ltr', tr: 'ltr',
+  fa: 'rtl', ur: 'rtl', hi: 'ltr',
+  bn: 'ltr', pt: 'ltr', ru: 'ltr',
+  zh: 'ltr', ja: 'ltr', ko: 'ltr',
+  id: 'ltr', ms: 'ltr', it: 'ltr',
+  nl: 'ltr', pl: 'ltr', sv: 'ltr',
+  da: 'ltr', no: 'ltr', fi: 'ltr',
+  cs: 'ltr', ro: 'ltr', hu: 'ltr',
+  el: 'ltr', th: 'ltr', vi: 'ltr',
+  uk: 'ltr',
+}
