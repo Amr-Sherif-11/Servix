@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import Link from 'next/link'
+import Image from 'next/image'
 import { 
   Eye, EyeOff, Mail, Lock, User, Phone, Briefcase, 
   DollarSign, AlertCircle, ChevronDown, Globe, MapPin, 
@@ -1702,8 +1703,8 @@ function RegisterForm() {
           {step === 1 && (
             <div className="animate-slide-up">
               <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20">
-                  <Globe className="w-8 h-8 text-white" />
+                <div className="w-24 h-24 bg-white/10 rounded-[2rem] flex items-center justify-center mx-auto mb-6 backdrop-blur-md border border-white/20 shadow-2xl overflow-hidden p-2">
+                  <Image src="/logo.png" alt="Servix Logo" width={96} height={96} className="w-full h-full object-contain" priority />
                 </div>
                 <h1 className="text-3xl font-black text-white mb-2">{txt.step1}</h1>
                 <p className="text-white/60">{(txt as any).step1Desc || 'Choose your language and location to start'}</p>
