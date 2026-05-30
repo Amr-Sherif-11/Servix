@@ -7,7 +7,7 @@ import type { JWT } from 'next-auth/jwt';
 
 const supabase = createClient();
 
-export const authOptions = {
+const authOptions = {
   providers: [
     FacebookProvider({
       clientId: process.env.FACEBOOK_CLIENT_ID ?? '',
@@ -16,7 +16,7 @@ export const authOptions = {
   ],
   adapter: SupabaseAdapter({
     url: process.env.NEXT_PUBLIC_SUPABASE_URL ?? '',
-    secret: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '',
+    secret: process.env.SUPABASE_SERVICE_ROLE_KEY ?? '',
   }),
   callbacks: {
     async signIn({ user, account, profile }: {
