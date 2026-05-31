@@ -182,7 +182,18 @@
     "online": "Online",
     "typing": "Typing...",
     "uploadFailed": "Upload failed",
-    "newMessageTitle": "New Message"
+    "newMessageTitle": "New Message",
+    "accept": "Accept",
+    "decline": "Decline",
+    "pendingApproval": "Pending Approval...",
+    "accepted": "Accepted",
+    "declined": "Declined",
+    "sendOffer": "Send Price Offer",
+    "amount": "Amount ($)",
+    "description": "Description",
+    "offerDescPlaceholder": "What is included in this offer?",
+    "priceOffer": "Price Offer",
+    "offline": "Offline"
   },
   "review": {
     "title": "Leave a Review",

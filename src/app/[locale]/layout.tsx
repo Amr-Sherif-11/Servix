@@ -9,6 +9,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
+import GlobalRealtimeProvider from '@/components/providers/GlobalRealtimeProvider'
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
@@ -36,11 +38,13 @@ export default async function LocaleLayout({
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             <AuthProvider>
-              <ProgressBarProvider>
-                <div className="relative min-h-screen">
-                  {children}
-                </div>
-              </ProgressBarProvider>
+              <GlobalRealtimeProvider>
+                <ProgressBarProvider>
+                  <div className="relative min-h-screen">
+                    {children}
+                  </div>
+                </ProgressBarProvider>
+              </GlobalRealtimeProvider>
             </AuthProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
