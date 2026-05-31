@@ -446,8 +446,8 @@ function LoginForm() {
       <div className="relative w-full max-w-md animate-fade-in">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="w-24 h-24 bg-white/10 rounded-[2rem] flex items-center justify-center mx-auto mb-6 backdrop-blur-md border border-white/20 shadow-2xl overflow-hidden p-2">
-            <Image src="/logo.png" alt="Servix Logo" width={96} height={96} className="w-full h-full object-contain" priority />
+          <div className="w-28 h-28 mx-auto mb-6">
+            <Image src="/logo.png" alt="Servix Logo" width={112} height={112} className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(129,140,248,0.4)]" priority />
           </div>
           <h1 className="text-3xl font-bold text-white mb-1">{txt.title}</h1>
           <p className="text-white/70">{txt.subtitle}</p>
